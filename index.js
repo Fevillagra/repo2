@@ -1,21 +1,10 @@
-class Licor {
-    constructor(name, price) {
-        this.name = name.toUpperCase()
-        this.price = parseFloat(price)
-        this.sold = false
-    }
+const lista = []
+let cantidad = parseInt(prompt('Ingrese la cantidad de alumnos:'))
 
-    addIVA() {
-        this.price = this.price * 1.21
-    }
-}
+do{
+    let entrada = prompt('Ingrese nombre del alumno')
+    lista.push(entrada.toUpperCase())
+    console.log(lista.length)
+} while(lista.length != cantidad)
 
-const productos = []
-
-productos.push(new Licor("ron",120))
-productos.push(new Licor("whiskey",100))
-productos.push(new Licor("fernet",80))
-
-for(const product of productos) product.addIVA
-
-console.log(productos)
+alert('La lista de alumnos es: \n' + lista.join('\n') )
